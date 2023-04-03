@@ -45,3 +45,12 @@ class CellList(generics.ListCreateAPIView):
 class CellDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Cell.objects.all()
     serializer_class = CellSerializer
+
+#here is the URLS FOR Manager
+class ManagerList(generics.ListCreateAPIView):
+    queryset = Manager.objects.all()
+    serializer_class = ManagerSerializer
+    
+class ManagerDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Manager.objects.all()
+    serializer_class = ManagerSerializer

@@ -20,4 +20,8 @@ urlpatterns = [
     #urls to access cells
     path("<int:pk>/", CellDetail.as_view(), name="LIST_Detail"),
     path("cell", CellList.as_view(), name="List"),
+    
+    #urls to create Manager
+    path("<int:pk>/", ManagerDetail.as_view(), name="LIST_Detail"),
+    path("manager", ManagerList.as_view(), name="List"),
 ]

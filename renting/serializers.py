@@ -39,4 +39,18 @@ class CellSerializer(serializers.ModelSerializer):
         )
         model = Cell
 
+class ManagerSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = (
+        "user",
+        "gender",
+        "province",
+        "gender",
+        "phone_number",
+        "district",
+        "sector",
+        
+        )
+        model = Manager
+
     
