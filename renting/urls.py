@@ -24,4 +24,10 @@ urlpatterns = [
     #urls to create Manager
     path("<int:pk>/", ManagerDetail.as_view(), name="LIST_Detail"),
     path("manager", ManagerList.as_view(), name="List"),
+    
+      #urls to create Manager
+    path("<int:pk>/", LandlordDetail.as_view(), name="LIST_Detail"),
+    path("landlord", LandlordList.as_view(), name="List"),
+    
+    
 ]

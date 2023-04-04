@@ -45,12 +45,26 @@ class ManagerSerializer(serializers.ModelSerializer):
         "user",
         "gender",
         "province",
-        "gender",
         "phone_number",
         "district",
         "sector",
         
         )
         model = Manager
+
+
+class LandlordSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = (
+        "user",
+        "gender",
+        "province",
+        "phone_number",
+        "district",
+        "sector",
+        "cell",
+        
+        )
+        model = Landlord
 
     

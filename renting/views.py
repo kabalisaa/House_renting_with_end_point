@@ -54,3 +54,12 @@ class ManagerList(generics.ListCreateAPIView):
 class ManagerDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Manager.objects.all()
     serializer_class = ManagerSerializer
+
+#here is the URLS FOR Landlord
+class LandlordList(generics.ListCreateAPIView):
+    queryset = Landlord.objects.all()
+    serializer_class = LandlordSerializer
+    
+class LandlordDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Landlord.objects.all()
+    serializer_class = LandlordSerializer
