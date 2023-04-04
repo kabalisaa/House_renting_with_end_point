@@ -41,31 +41,33 @@ class CellSerializer(serializers.ModelSerializer):
 
 class ManagerSerializer(serializers.ModelSerializer):
     class Meta:
-        fields = (
-        "user",
-        "gender",
-        "province",
-        "phone_number",
-        "district",
-        "sector",
+        # fields = (
+        # "user",
+        # "gender",
+        # "province",
+        # "phone_number",
+        # "district",
+        # "sector",
         
-        )
+        # )
         model = Manager
+        fields = '__all__'
 
 
 class LandlordSerializer(serializers.ModelSerializer):
     class Meta:
-        fields = (
-        "user",
-        "gender",
-        "province",
-        "phone_number",
-        "district",
-        "sector",
-        "cell",
+        # fields = (
+        # "user",
+        # "gender",
+        # "province",
+        # "phone_number",
+        # "district",
+        # "sector",
+        # "cell",
         
-        )
+        # )
         model = Landlord
+        fields = '__all__'
 
 
 class PropertyTypeSerializer(serializers.ModelSerializer):
@@ -113,11 +115,13 @@ class PropertyImagesSerializer(serializers.ModelSerializer):
 
 class PublishingPaymentSerializer(serializers.ModelSerializer):
     class Meta:
-        fields = (
-        "property",
-        "landlord",
-        "payment_amount",
-        "payment_method",
-        "created_date", 
-        )
-        model = PublishingPayment   
+        # fields = (
+        # "property",
+        # "landlord",
+        # "payment_amount",
+        # "payment_method",
+        # "created_date", 
+        # )
+        model = PublishingPayment
+        fields = '__all__'
+           
