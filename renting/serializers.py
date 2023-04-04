@@ -67,4 +67,57 @@ class LandlordSerializer(serializers.ModelSerializer):
         )
         model = Landlord
 
-    
+
+class PropertyTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = (
+        "type_name",
+        
+        )
+        model = PropertyType   
+
+class PropertySerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = (
+        "landlord",
+        "property_type",
+        "title",
+        "description",
+        "bedrooms",
+        "bathrooms",
+        "is_furnished",
+        "floors",
+        "plot_size",
+        "renting_price",
+        "status",
+        "pub_date",
+        "created_date",
+        "province",
+        "district",
+        "sector",
+        "cell",
+        "street",   
+        
+        )
+        model = Property   
+
+
+class PropertyImagesSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = (
+        "property",
+        "property_image",
+        
+        )
+        model = PropertyImages   
+
+class PublishingPaymentSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = (
+        "property",
+        "landlord",
+        "payment_amount",
+        "payment_method",
+        "created_date", 
+        )
+        model = PublishingPayment   

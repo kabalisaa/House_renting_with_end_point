@@ -61,12 +61,12 @@ class PropertyAdmin(admin.ModelAdmin):
         ('PROPERTY DETAILS', {'fields': ('title','description','property_type',('bedrooms','bathrooms','floors','is_furnished'),'plot_size','renting_price','status',)}),
         ('Location Address', {'fields': ('province', 'district', 'sector', 'cell', 'street',)}),
         ('Property Owner', {'fields': ('landlord',)}),
-        ('Other Info', {'fields': ('created_date', 'pub_date',)}),
+        # ('Other Info', {'fields': ('created_date', 'pub_date',)}),
     )
     add_fieldsets = (
         ('Property Owner', {'fields': ('landlord',)}),
         ('NEW PROPERTY', {'fields': ('title','description','property_type',('bedrooms','bathrooms','floors','is_furnished'),'plot_size','renting_price','status',)}),
-        ('Location Address', {'fields': ('province', 'district', 'sector', 'cell', 'street',)}),
+        ('Location Address', {'fields': (('province', 'district'), ('sector', 'cell', 'street'),)}),
     )
     search_fields = ('landlord','title',)
     ordering = ('property_type','district',)

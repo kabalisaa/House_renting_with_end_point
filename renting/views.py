@@ -63,3 +63,39 @@ class LandlordList(generics.ListCreateAPIView):
 class LandlordDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Landlord.objects.all()
     serializer_class = LandlordSerializer
+    
+#here is the URLS FOR PropertyType 
+class PropertyTypeList(generics.ListCreateAPIView):
+    queryset = PropertyType.objects.all()
+    serializer_class = PropertyTypeSerializer
+    
+class PropertyTypeDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = PropertyType.objects.all()
+    serializer_class = PropertyTypeSerializer
+    
+#here is the URLS FOR PropertyType 
+class PropertyList(generics.ListCreateAPIView):
+    queryset = Property.objects.all()
+    serializer_class = PropertySerializer
+    
+class PropertyDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Property.objects.all()
+    serializer_class = PropertySerializer
+    
+#here is the URLS FOR PropertyImages
+class PropertyImagesList(generics.ListCreateAPIView):
+    queryset = PropertyImages.objects.all()
+    serializer_class = PropertyImagesSerializer
+    
+class PropertyImagesDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = PropertyImages.objects.all()
+    serializer_class = PropertyImagesSerializer
+
+#here is the URLS FOR PublishingPayment
+class PublishingPaymentList(generics.ListCreateAPIView):
+    queryset = PublishingPayment.objects.all()
+    serializer_class = PublishingPaymentSerializer
+    
+class PublishingPaymentDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = PublishingPayment.objects.all()
+    serializer_class = PublishingPaymentSerializer
